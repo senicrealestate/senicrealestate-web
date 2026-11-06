@@ -1,12 +1,23 @@
 import { useState } from 'react'
 import './App.css'
-
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import LandingPage from './pages/LandingPage';
 function App() {
 
 
   return (
     <>
-      This is home page.
+    <BrowserRouter>
+    <Routes>
+    <Route path='/' element={<LandingPage/>}/>
+
+    </Routes>
+    </BrowserRouter>
+    
     </>
   )
 }
